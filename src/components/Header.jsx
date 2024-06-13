@@ -8,20 +8,21 @@ import { IoClose } from "react-icons/io5";
 import F from "../hooks/toggleHeader.js";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
+import { motion, AnimatePresence } from "framer-motion";
 const Header = () => {
   const [a, setA] = F();
   useGSAP(() => {
     const tl = gsap.timeline();
     if (!a) {
       tl.to(".nav-bar", {
-        height: 230,
+        height: "100vh",
         duration: 1,
       });
       tl.from(".lnk", {
         x: 50,
         opacity: 0,
         duration: 1,
-        stagger: 0.05,
+        stagger: 0.1,
       });
       // lnk
     } else {
@@ -38,7 +39,6 @@ const Header = () => {
     }
   }, [a]);
   const linksEn = ["/", "/about-us", "/our-services", "contact-us"];
-  console.log(a);
   return (
     <header
       style={{ direction: "rtl" }}
@@ -56,15 +56,22 @@ const Header = () => {
       </Link>
       <section className="gap-[30px] text-[22px] md:text-[1.5vw] md:flex hidden font-[helveticaNeue] text-white">
         {["الرئيسية", "من نحن", "خدماتنا", "اتصل بنا"].map((l, i) => (
-          <Link key={l} href={linksEn[i]}>
+          <Link
+            key={l}
+            className="hover:text-[#808080] transition-all duration-300"
+            href={linksEn[i]}
+          >
             {l}
           </Link>
         ))}
       </section>
       <section className="text-white flex gap-[15px] items-center">
-        <Link href={`/en`} className="font-[montserrat] text-[22px] font-bold">
-          <span className="font-[helveticaNeue]">عربي</span> / EN
-        </Link>
+        <div className="font-[montserrat] text-[18px] font-bold">
+          <span className="font-[helveticaNeue]">
+            <Link href={`/`}>AR</Link>
+          </span>{" "}
+          / <Link href={`/en`}>EN</Link>
+        </div>
         <section className="block md:hidden">
           <div
             className="text-[20px] cursor-pointer"
@@ -83,22 +90,25 @@ const Header = () => {
         </section>
       </section>
       {/* Header Mobile */}
-      {!a && (
-        <section className="nav-bar origin-top absolute  border-[1px] border-[#bbb] border-solid  md:hidden  h-0 bg-black z-[1000] w-[99.5%] top-full left-1/2 -translate-x-1/2">
-          <div className="flex py-[15px] gap-[15px] flex-col pr-[12vw]">
-            {["الرئيسية", "من نحن", "خدماتنا", "اتصل بنا"].map((l, i) => (
-              <div key={l} className="lnk" onClick={() => setA((p) => !p)}>
-                <Link
-                  className="text-white hover:text-[#808080] transition-all duration-300 font-bold text-[20px]"
-                  href={linksEn[i]}
-                >
-                  {l}
-                </Link>
-              </div>
-            ))}
-          </div>
-        </section>
-      )}
+      <AnimatePresence>
+        {!a && (
+          <motion.section className="nav-bar origin-top absolute  border-[1px] border-[#bbb] border-solid  md:hidden  h-0 bg-black z-[1000] w-[99.5%] top-full left-1/2 -translate-x-1/2">
+            <div className="flex py-[15px] gap-[15px] flex-col pr-[12vw]">
+              {["الرئيسية", "من نحن", "خدماتنا", "اتصل بنا"].map((l, i) => (
+                <div key={l} className="lnk" onClick={() => setA((p) => !p)}>
+                  <Link
+                    className="text-white font-[helveticaNeue] hover:text-[#808080] transition-all duration-300 font-bold text-[20px]"
+                    href={linksEn[i]}
+                  >
+                    {l}
+                  </Link>
+                </div>
+              ))}
+            </div>
+          </motion.section>
+        )}
+      </AnimatePresence>
+
       {/* Header Mobile */}
     </header>
   );
