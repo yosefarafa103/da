@@ -38,7 +38,13 @@ const Header = () => {
       });
     }
   }, [a]);
-  const linksEn = ["/", "/about-us", "/our-services", "contact-us"];
+  const linksEn = [
+    "/",
+    "/about-us",
+    "/our-services",
+    "contact-us",
+    "/our-customer",
+  ];
   return (
     <header
       style={{ direction: "rtl" }}
@@ -55,15 +61,17 @@ const Header = () => {
         />
       </Link>
       <section className="gap-[30px] text-[22px] md:text-[1.5vw] md:flex hidden font-[helveticaNeue] text-white">
-        {["الرئيسية", "من نحن", "خدماتنا", "اتصل بنا"].map((l, i) => (
-          <Link
-            key={l}
-            className="hover:text-[#808080] transition-all duration-300"
-            href={linksEn[i]}
-          >
-            {l}
-          </Link>
-        ))}
+        {["الرئيسية", "من نحن", "خدماتنا", "اتصل بنا", "عملائنا"].map(
+          (l, i) => (
+            <Link
+              key={l}
+              className="hover:text-[#808080] transition-all duration-300"
+              href={linksEn[i]}
+            >
+              {l}
+            </Link>
+          )
+        )}
       </section>
       <section className="text-white flex gap-[15px] items-center">
         <div className="font-[montserrat] text-[18px] font-bold">
@@ -94,16 +102,23 @@ const Header = () => {
         {!a && (
           <motion.section className="nav-bar origin-top absolute  border-[1px] border-[#bbb] border-solid  md:hidden  h-0 bg-black z-[1000] w-[99.5%] top-full left-1/2 -translate-x-1/2">
             <div className="flex py-[15px] gap-[15px] flex-col pr-[12vw]">
-              {["الرئيسية", "من نحن", "خدماتنا", "اتصل بنا"].map((l, i) => (
-                <div key={l} className="lnk" onClick={() => setA((p) => !p)}>
-                  <Link
-                    className="text-white font-[helveticaNeue] hover:text-[#808080] transition-all duration-300 font-bold text-[20px]"
-                    href={linksEn[i]}
+              {["الرئيسية", "من نحن", "خدماتنا", "اتصل بنا", "عملائنا"].map(
+                (l, i) => (
+                  <motion.div
+                    whileTap={{ scale: 0.09 }}
+                    key={l}
+                    className="lnk"
+                    onClick={() => setA((p) => !p)}
                   >
-                    {l}
-                  </Link>
-                </div>
-              ))}
+                    <Link
+                      className="text-white font-[helveticaNeue] hover:text-[#808080] transition-all duration-300 font-bold text-[20px]"
+                      href={linksEn[i]}
+                    >
+                      {l}
+                    </Link>
+                  </motion.div>
+                )
+              )}
             </div>
           </motion.section>
         )}

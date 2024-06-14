@@ -4,6 +4,7 @@ import Image from "next/image";
 import im from "../assets/imgs/Vector-Smart-Object.png";
 import img1 from "@/assets/imgs/1+++.png";
 import img2 from "@/assets/imgs/1.png";
+import Link from "next/link";
 const HomePage = () => {
   return (
     <>
@@ -13,7 +14,6 @@ const HomePage = () => {
         name="description"
         content="كتابة المحتوي, تصميم الهوية التجارية , والتصوير الفوتوغرافي"
       />
-
       <div className="min-h-screen pr-[4vw] bg-[#000000] p-[1vw] text-white font-[montserrat]">
         <section
           className="mt-[2vw] md:flex  items-center gap-10"
@@ -41,13 +41,13 @@ const HomePage = () => {
               بجانب من اعداد الافتتاحات والفعاليات .. يعني مزيج من العصف الذهني,
               من الاخذ بعين الاعتبار ان رضا عميلنا هو الاهم
             </p>
-            <a
-              href=""
+            <Link
+              href="/contact-us"
               className="mt-[50px] relative font-bold overflow-hidden z-[100] group flex items-center duration-500 transition-all  hover:text-black justify-center w-fit px-[32px] py-[10px] border-solid border-[1px] border-[#fff] rounded-[50px] font-[helveticaNeue]"
             >
               تواصل معنا !
               <span className="absolute block rounded-[inherit] size-[10px] group-hover:size-[100%] left-0 bottom-0  duration-500 transition-all bg-white  -z-[1]"></span>
-            </a>
+            </Link>
           </div>
           <div className="relative min-h-[50vh] md:min-h-[90vh] flex-[2]">
             <Image

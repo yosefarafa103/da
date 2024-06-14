@@ -32,24 +32,8 @@ const Features = () => {
             ))}
           </section>
         </section>
-        {/* 
-            text-align: center;
-    font-size: 8vw;
-    line-height: 1;
-    font-weight: 900;
-    -webkit-text-stroke: 2px #000;
-    color: transparent;
-    letter-spacing: 4px;
-        */}
-        <section
-          style={{
-            WebkitTextStroke: "2px #000",
-          }}
-          className="-rotate-[90deg] tracking-[4px] leading-[1] font-bold text-transparent text-center text-[8vw] max-md:hidden h-[30%] uppercase"
-        >
-          skhr <br />
-          Features
-        </section>
+
+    
       </section>
     </section>
   );

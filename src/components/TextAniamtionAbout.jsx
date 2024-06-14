@@ -12,6 +12,7 @@ const TextAniamtionAbout = () => {
       y: 100,
       stagger: 0.09,
       duration: 1.5,
+      delay: 3.4,
     });
     if (isSectionInView) {
       gsap.from(".title", {
@@ -43,11 +44,11 @@ const TextAniamtionAbout = () => {
       gsap.fromTo(
         ".cont div",
         {
-          xPercent: -100,
+          xPercent: 100,
         },
         {
           duration: 100,
-          xPercent: 100,
+          xPercent: -100,
           repeat: -1,
         }
       );
@@ -56,7 +57,7 @@ const TextAniamtionAbout = () => {
   }, [isSectionInView]);
   return (
     <>
-      <div className="h-[70vh]  px-[3.2vw] text-[22px] md:text-[3vw] flex-col text-white font-[helveticaNeue] flex items-center text-center justify-center bg-[#f75b4cd1]">
+      <div className="h-[70vh]  px-[3.2vw] text-[22px] md:text-[3vw] flex-col text-white font-[helveticaNeue] flex items-center text-center justify-center bg-[#a8a8a8]">
         <section className="w-[70%]">
           <div className="overflow-hidden">
             <div className="relative text">
@@ -101,21 +102,21 @@ const TextAniamtionAbout = () => {
           </div>
         </div>
       </div>
-      <div className="h-[90vh] relative mt-[50px]  md:items-center md:justify-end flex text-white bg-[#000]">
-        <section className="flex h-[60%] md:border-t-[1px] md:border-b-[1px] w-full md:border-b-[#bbbbbb26] md:border-b-solid pb-[25px] border-t-[#bbbbbb26] border-t-solid overflow-hidden flex-row-reverse justify-between items-end">
+      <div className="h-[90vh] overflow-x-hidden relative mt-[50px] md:items-center md:justify-end flex text-white bg-[#000]">
+        <section className="flex h-[60%]  md:border-t-[1px] md:border-b-[1px] w-full md:border-b-[#bbbbbb26] md:border-b-solid pb-[25px] border-t-[#bbbbbb26] border-t-solid overflow-hidden flex-row-reverse justify-between items-end">
           <section className="flex flex-1 flex-col gap-3">
             <div className="flex flex-col gap-3 max-md:items-center">
               <h3 className="font-bold text-[28px] md:text-[2.3vw]">الرؤية</h3>
-              <p className="w-[70%] font-semibold ">
-                نسعى جاهدين لتقديم خدمات كاملة متميزةتلبي تطلعاتكم وتفوق
+              <p className="w-[70%] leading-[2] font-semibold ">
+                نسعى جاهدين لتقديم خدمات كاملة متميزة تلبي تطلعاتكم وتفوق
                 توقعاتكم.
               </p>
             </div>
             <div className="flex flex-col gap-3 max-md:items-center">
               <h3 className="font-bold text-[28px] md:text-[2.3vw]">المهمة</h3>
-              <p className="w-[70%] font-semibold">
-                نجمع بين المنهجية والخبرة. اإلبداع واإلتقان والحروف والكالم. إىل
-                أن تصل بك إىل النجاح بإتمام.
+              <p className="w-[70%] leading-[2] font-semibold">
+                نجمع بين المنهجية والخبرة. الابداع واإلاتقان والحروف والكلام.
+                الي أن تصل بك الي النجاح بإتمام.
               </p>
             </div>
           </section>
@@ -124,23 +125,23 @@ const TextAniamtionAbout = () => {
               className="uppercase mx-[2vw] text-[30px] wraper1 md:text-[8vw] rotate-[180deg] !text-transparent font-[900]"
               style={{ WebkitTextStroke: "1px #fff " }}
             >
-              Mission
+              Dabous
             </div>
             <div
               className="uppercase text-[30px] md:text-[8vw] wraper2 !text-transparent font-[900]"
               style={{ WebkitTextStroke: "1px #fff " }}
             >
-              Mission
+              Dabous
             </div>
           </section>
-          <section className="flex md:hidden absolute -top-[40px] items-center cont gap-[30px]">
+          <section className="flex md:hidden absolute top-0 items-center cont gap-[30px]">
             {[1, 2, 3, 4, 5].map((item) => (
               <div
                 key={Math.random() * item}
                 className="uppercase text-[85px] leading-[1] !text-transparent transition-all  hover:!text-white font-[900]"
                 style={{ WebkitTextStroke: "1px #fff " }}
               >
-                Mission&
+                Dabous
               </div>
             ))}
           </section>
