@@ -48,7 +48,7 @@ const Header = () => {
   return (
     <header
       style={{ direction: "rtl" }}
-      className="flex relative items-center justify-between bg-[#000] px-[22px] md:px-[2.1vw]"
+      className="flex fixed w-full left-0 top-0 z-[99999999999999999999] items-center justify-between bg-[#000] px-[22px] md:px-[2.1vw]"
     >
       <Link href={`/`} className="block w-fit overflow-hidden">
         <Image
@@ -63,13 +63,14 @@ const Header = () => {
       <section className="gap-[30px] text-[22px] md:text-[1.5vw] md:flex hidden font-[helveticaNeue] text-white">
         {["الرئيسية", "من نحن", "خدماتنا", "اتصل بنا", "عملائنا"].map(
           (l, i) => (
-            <Link
-              key={l}
-              className="hover:text-[#808080] transition-all duration-300"
-              href={linksEn[i]}
-            >
-              {l}
-            </Link>
+            <motion.div key={l} whileTap={{ scale: 0.8 }}>
+              <Link
+                className="hover:text-[#808080] transition-all duration-300"
+                href={linksEn[i]}
+              >
+                {l}
+              </Link>
+            </motion.div>
           )
         )}
       </section>
@@ -105,7 +106,6 @@ const Header = () => {
               {["الرئيسية", "من نحن", "خدماتنا", "اتصل بنا", "عملائنا"].map(
                 (l, i) => (
                   <motion.div
-                    whileTap={{ scale: 0.09 }}
                     key={l}
                     className="lnk"
                     onClick={() => setA((p) => !p)}

@@ -32,8 +32,6 @@ const Features = () => {
             ))}
           </section>
         </section>
-
-    
       </section>
     </section>
   );

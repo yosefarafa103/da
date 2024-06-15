@@ -1,7 +1,7 @@
 "use client";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
-
+import { AnimatePresence, motion } from "framer-motion";
 const AnimateSection = ({ children, title }) => {
   useGSAP(() => {
     gsap.from(".page-t", {
@@ -22,14 +22,16 @@ const AnimateSection = ({ children, title }) => {
     });
   });
   return (
-    <>
+    <motion.section>
       <div className="bg-[#a8a8a8] page-content w-full z-[10000] origin-top fixed top-[100px] flex items-center justify-center h-[90vh] font-[helveticaNeue] text-[10vw]">
         <div className="overflow-hidden">
           <h3 className="font-[900] page-t relative text-white">{title}</h3>
         </div>
       </div>
-      <section>{children}</section>
-    </>
+      <AnimatePresence>
+        <motion.section exit={{ scale: 0.5 }}>{children}</motion.section>
+      </AnimatePresence>
+    </motion.section>
   );
 };
 

@@ -7,6 +7,7 @@ import SingleWork from "@/components/SingleWork";
 const About = () => {
   return (
     <>
+    <title>من نحن</title>
       <AnimateSection title={`من نحن`}>
         <section style={{ direction: "rtl" }} className="bg-[#000]">
           <TextAniamtionAbout />

@@ -1,8 +1,6 @@
 "use client";
-
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
-
 const OurServices = () => {
   useGSAP(() => {
     gsap.from(".page-t", {
@@ -24,6 +22,8 @@ const OurServices = () => {
   }, []);
   return (
     <>
+      <title>خدماتنا</title>
+
       <div className="bg-[#a8a8a8] page-content w-full z-[10000] origin-top fixed top-[100px] flex items-center justify-center h-[90vh] font-[helveticaNeue] text-[10vw]">
         <div className="overflow-hidden">
           <h3 className="font-[900] page-t relative text-white">خدماتنا</h3>

@@ -14,7 +14,7 @@ export default function RootLayout({ children }) {
       <body>
         <Header />
         <SocialMedia />
-        {children}
+        <main className="relative top-[100px]">{children}</main>
       </body>
     </html>
   );
