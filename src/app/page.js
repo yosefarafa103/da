@@ -6,9 +6,9 @@ export default function Home() {
   return (
     <>
       <section className="font-[helveticaNeue]">
-        <AnimateSection title={`الرئيسية`}>
-          <HomePage />
-        </AnimateSection>
+        {/* <AnimateSection title={`الرئيسية`}> */}
+        <HomePage />
+        {/* </AnimateSection> */}
       </section>
     </>
   );

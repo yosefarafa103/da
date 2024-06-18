@@ -1,11 +1,11 @@
 const Features = () => {
   return (
     <section className="min-h-[90vh] bg-white py-[30px] px-[2.3vw]">
-      <section className="flex items-center font-[helveticaNeue] gap-[10px]">
-        <h2 className="md:text-[65px] max-[576px]:text-[30px] font-[900] ">
+      <section className="flex items-center whitespace-nowrap font-[helveticaNeue] gap-[10px]">
+        <h2 className="max-[576px]:text-[30px] text-[30px] md:text-[44px] font-[900] ">
           مَا يُميّز
         </h2>
-        <h4 className="md:text-[44px] font-[900] relative max-[576px]:text-[30px] top-[35px]">
+        <h4 className="md:text-[44px] text-[30px] font-[900]">
           دبــــــــــــــــــــــــــــــــــــــــــــــــــــوس
         </h4>
       </section>

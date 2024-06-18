@@ -57,7 +57,7 @@ const TextAniamtionAbout = () => {
   }, [isSectionInView]);
   return (
     <>
-      <div className="h-[70vh]  px-[3.2vw] text-[22px] md:text-[3vw] flex-col text-white font-[helveticaNeue] flex items-center text-center justify-center bg-[#a8a8a8]">
+      {/* <div className="h-[70vh]  px-[3.2vw] text-[22px] md:text-[3vw] flex-col text-white font-[helveticaNeue] flex items-center text-center justify-center bg-[#a8a8a8]">
         <section className="w-[70%]">
           <div className="overflow-hidden">
             <div className="relative text">
@@ -74,11 +74,11 @@ const TextAniamtionAbout = () => {
             <div className="relative text">للتحول الرقمي الذي تطمح الية</div>
           </div>
         </section>
-      </div>
+      </div> */}
       <div className="h-[50vh] text-white px-[2vw] pt-[1.5vw] flex  justify-center flex-col text-right font-[helveticaNeue] bg-[#000]">
         <div className="overflow-hidden">
-          <h3 className="md:text-[2.5vw] title text-[26px] relative font-bold">
-            نبذه حول ”دبـــــــــــــــــــــــــــــــــــوس{" "}
+          <h3 className="md:text-[2.5vw] title text-[26px] whitespace-nowrap relative font-bold">
+            نبذه حول ”دبـــــــــــــــــــــــــــــــــــوس
           </h3>
         </div>
         <div

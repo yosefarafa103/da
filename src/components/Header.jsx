@@ -2,7 +2,6 @@
 import Image from "next/image";
 import Link from "next/link";
 import logo from "@/assets/imgs/Dabous-01.png";
-import { useState } from "react";
 import { FaBars } from "react-icons/fa";
 import { IoClose } from "react-icons/io5";
 import F from "../hooks/toggleHeader.js";
@@ -61,7 +60,7 @@ const Header = () => {
         />
       </Link>
       <section className="gap-[30px] text-[22px] md:text-[1.5vw] md:flex hidden font-[helveticaNeue] text-white">
-        {["الرئيسية", "من نحن", "خدماتنا", "اتصل بنا", "عملائنا"].map(
+        {["الرئيسية", "من نحن", "خدماتنا", "اتصل بنا", "شركاء التواصل"].map(
           (l, i) => (
             <motion.div key={l} whileTap={{ scale: 0.8 }}>
               <Link
@@ -77,9 +76,14 @@ const Header = () => {
       <section className="text-white flex gap-[15px] items-center">
         <div className="font-[montserrat] text-[18px] font-bold">
           <span className="font-[helveticaNeue]">
-            <Link href={`/`}>AR</Link>
+            <Link href={`/`} className="max-sm:text-[16px]">
+              AR
+            </Link>
           </span>{" "}
-          / <Link href={`/en`}>EN</Link>
+          /{" "}
+          <Link href={`/en`} className="max-sm:text-[16px]">
+            EN
+          </Link>
         </div>
         <section className="block md:hidden">
           <div
@@ -103,22 +107,26 @@ const Header = () => {
         {!a && (
           <motion.section className="nav-bar origin-top absolute  border-[1px] border-[#bbb] border-solid  md:hidden  h-0 bg-black z-[1000] w-[99.5%] top-full left-1/2 -translate-x-1/2">
             <div className="flex py-[15px] gap-[15px] flex-col pr-[12vw]">
-              {["الرئيسية", "من نحن", "خدماتنا", "اتصل بنا", "عملائنا"].map(
-                (l, i) => (
-                  <motion.div
-                    key={l}
-                    className="lnk"
-                    onClick={() => setA((p) => !p)}
+              {[
+                "الرئيسية",
+                "من نحن",
+                "خدماتنا",
+                "اتصل بنا",
+                "شركاء التواصل",
+              ].map((l, i) => (
+                <motion.div
+                  key={l}
+                  className="lnk"
+                  onClick={() => setA((p) => !p)}
+                >
+                  <Link
+                    className="text-white font-[helveticaNeue] hover:text-[#808080] transition-all duration-300 font-bold text-[20px]"
+                    href={linksEn[i]}
                   >
-                    <Link
-                      className="text-white font-[helveticaNeue] hover:text-[#808080] transition-all duration-300 font-bold text-[20px]"
-                      href={linksEn[i]}
-                    >
-                      {l}
-                    </Link>
-                  </motion.div>
-                )
-              )}
+                    {l}
+                  </Link>
+                </motion.div>
+              ))}
             </div>
           </motion.section>
         )}

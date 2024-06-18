@@ -7,12 +7,12 @@ import SingleWork from "@/components/SingleWork";
 const About = () => {
   return (
     <>
-    <title>من نحن</title>
-      <AnimateSection title={`من نحن`}>
-        <section style={{ direction: "rtl" }} className="bg-[#000]">
-          <TextAniamtionAbout />
-          <Features />
-          {/* <DaposWorks>
+      <title>من نحن</title>
+      {/* <AnimateSection title={`من نحن`}> */}
+      <section style={{ direction: "rtl" }} className="bg-[#000]">
+        <TextAniamtionAbout />
+        <Features />
+        {/* <DaposWorks>
             <SingleWork workTitle={`ARS_ROASTERY`}>
               <section className="h-full bg-[#D7BEA0]"></section>
             </SingleWork>
@@ -26,8 +26,8 @@ const About = () => {
               <section className="h-full bg-[#362e15]"></section>
             </SingleWork>
           </DaposWorks> */}
-        </section>
-      </AnimateSection>
+      </section>
+      {/* </AnimateSection> */}
     </>
   );
 };
