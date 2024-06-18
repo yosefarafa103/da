@@ -1,5 +1,6 @@
 import img from "@/assets/imgs/Screenshot_5.png";
 import img2 from "@/assets/imgs/d.png";
+import img3 from "@/assets/imgs/MATN - LOGO -01.jpg";
 const Customer = () => {
   return (
     <>
@@ -19,6 +20,12 @@ const Customer = () => {
           loading="lazy"
           src={img.src}
           alt="Partners"
+          className="w-[90%] mx-auto rounded-[10px] mt-[30px] object-cover md:h-[80vh] h-[70vh]"
+        />
+        <img
+          loading="lazy"
+          src={img3.src}
+          alt="Partners2"
           className="w-[90%] mx-auto rounded-[10px] mt-[30px] object-cover md:h-[80vh] h-[70vh]"
         />
       </div>
