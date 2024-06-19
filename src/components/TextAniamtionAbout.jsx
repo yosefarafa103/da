@@ -78,7 +78,7 @@ const TextAniamtionAbout = () => {
       <div className="h-[50vh] text-white px-[2vw] pt-[1.5vw] flex  justify-center flex-col text-right font-[helveticaNeue] bg-[#000]">
         <div className="overflow-hidden">
           <h3 className="md:text-[2.5vw] title text-[26px] whitespace-nowrap relative font-bold">
-            نبذه حول ”دبـــــــــــــــــــــــــــــــــــوس
+            نبذه حول ”دبــــــــوس
           </h3>
         </div>
         <div

@@ -1,12 +1,12 @@
 const Features = () => {
   return (
-    <section className="min-h-[90vh] bg-white py-[30px] px-[2.3vw]">
+    <section className="min-h-[90vh] bg-black text-white py-[30px] px-[2.3vw]">
       <section className="flex items-center whitespace-nowrap font-[helveticaNeue] gap-[10px]">
         <h2 className="max-[576px]:text-[30px] text-[30px] md:text-[44px] font-[900] ">
           مَا يُميّز
         </h2>
         <h4 className="md:text-[44px] text-[30px] font-[900]">
-          دبــــــــــــــــــــــــــــــــــــــــــــــــــــوس
+          دبــــــــــــــــــوس
         </h4>
       </section>
       <section className="flex items-center">
