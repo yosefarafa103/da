@@ -1,9 +1,5 @@
 import TextAniamtionAbout from "@/components/TextAniamtionAbout";
-import "../animations.css";
 import Features from "@/components/Features";
-import AnimateSection from "@/components/AnimateSection";
-import DaposWorks from "@/components/DaposWorks";
-import SingleWork from "@/components/SingleWork";
 const About = () => {
   return (
     <>
