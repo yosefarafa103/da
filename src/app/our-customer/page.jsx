@@ -29,7 +29,7 @@ const Customer = () => {
         <h3 className="text-[5vw] pt-[20px] text-white font-[helveticaNeue] font-[900] text-center">
           شركاء النجاح
         </h3>
-        <section className="grid gap-4 pl-[100px] grid-partners">
+        <section className="grid gap-4 sm-[576px]:pl-[100px] grid-partners">
           {[
             i1,
             i2,
@@ -51,7 +51,12 @@ const Customer = () => {
             i18,
             i19,
           ].map((el) => (
-            <img src={el.src} className="h-[100px]" loading="lazy" alt="" />
+            <img
+              src={el.src}
+              className="h-[100px] max-[576px]:mx-auto"
+              loading="lazy"
+              alt=""
+            />
           ))}
         </section>
       </div>
