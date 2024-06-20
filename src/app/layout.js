@@ -2,6 +2,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import SocialMedia from "@/components/SocialMedia";
+import Footer from "@/components/Footer";
 
 export const metadata = {
   title: "Create Next App",
@@ -13,7 +14,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body>
         <Header />
-        <SocialMedia />
+        {/* <SocialMedia /> */}
         <main className="relative top-[100px]">{children}</main>
       </body>
     </html>

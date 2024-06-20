@@ -1,5 +1,6 @@
 import TextAniamtionAbout from "@/components/TextAniamtionAbout";
 import Features from "@/components/Features";
+import Footer from "@/components/Footer";
 const About = () => {
   return (
     <>
@@ -24,6 +25,8 @@ const About = () => {
           </DaposWorks> */}
       </section>
       {/* </AnimateSection> */}
+      <Footer />
+
     </>
   );
 };

@@ -1,4 +1,6 @@
 "use client";
+import Footer from "@/components/Footer";
+import SocialMedia from "@/components/SocialMedia";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 const OurServices = () => {
@@ -22,6 +24,8 @@ const OurServices = () => {
   }, []);
   return (
     <>
+      {/* <SocialMedia /> */}
+
       <title>خدماتنا</title>
       {/* 
       <div className="bg-[#a8a8a8] page-content w-full z-[10000] origin-top fixed top-[100px] flex items-center justify-center h-[90vh] font-[helveticaNeue] text-[10vw]">
@@ -86,6 +90,7 @@ const OurServices = () => {
           </section>
         </div>
       </section>
+      <Footer />
     </>
   );
 };

@@ -1,6 +1,4 @@
-import img from "@/assets/imgs/Screenshot_5.png";
-import img2 from "@/assets/imgs/d.png";
-import img3 from "@/assets/imgs/MATN - LOGO -01.jpg";
+"use client";
 import i1 from "@/assets/partners/2BA6643A-ABF9-48E8-97A8-9916DC29422B.png";
 import i2 from "@/assets/partners/6F02FB9F-ECF7-44FF-95B7-894EC9C2E662.png";
 import i3 from "@/assets/partners/7A31B3FF-AC59-4AF9-AA9B-B3E58F6471F1.png";
@@ -20,16 +18,31 @@ import i16 from "@/assets/partners/CEE2C68D-19B2-467E-94A8-A5CB0A03077F.png";
 import i17 from "@/assets/partners/E134A1D0-D9A4-4A27-9F77-0195B35F3252.png";
 import i18 from "@/assets/partners/EA97E325-5496-4250-BEC4-85AE1E56A821.png";
 import i19 from "@/assets/partners/FAEBA281-F45B-4232-A178-B48687A40573.png";
+import Footer from "@/components/Footer";
+import { motion } from "framer-motion";
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
 const Customer = () => {
+  useGSAP(() => {
+    gsap.from(".img", {
+      y: 20,
+      opacity: 0,
+      stagger: {
+        each: 0.1,
+        grid: "auto"
+      },
+    });
+  }, []);
   return (
     <>
+      {/* <SocialMedia /> */}
       <title>شركاء التواصل</title>
-      {/* <AnimateSection title={`عملائنا`}> */}
+
       <div className="min-h-[90vh] bg-black py-[40x]">
         <h3 className="text-[5vw] pt-[20px] text-white font-[helveticaNeue] font-[900] text-center">
           شركاء النجاح
         </h3>
-        <section className="grid gap-4 sm-[576px]:pl-[100px] grid-partners">
+        <section className="grid gap-4 px-[4vw] py-[2vw] mt-[5vw] grid-partners">
           {[
             i1,
             i2,
@@ -53,13 +66,15 @@ const Customer = () => {
           ].map((el) => (
             <img
               src={el.src}
-              className="h-[100px] max-[576px]:mx-auto"
+              className="h-[100px] img scale-[1.7] max-[576px]:mx-auto"
               loading="lazy"
               alt=""
             />
           ))}
         </section>
       </div>
+      <Footer />
+
       {/* </AnimateSection> */}
     </>
   );
