@@ -9,7 +9,7 @@ const ContactMail = () => {
         target="_blank"
       >
         <CiMail className="text-black text-[22px]" />
-        توصلو معنا عبر الايميل
+        تواصلو معنا عبر الايميل
       </a>
     </div>
   );

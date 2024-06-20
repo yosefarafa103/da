@@ -85,10 +85,8 @@ const TextAniamtionAbout = () => {
           ref={ref1}
           className="text-[#f7f7f7] txts mt-[20px] text-[18px] w-[300px] ml-auto"
         >
-          <div className="whitespace-nowrap overflow-hidden">
-            <div className="title">
-              فريق سعودي, وخبرات سعوديه متمكنة وقوية, "
-            </div>
+          <div className="overflow-hidden w-max whitespace-nowrap">
+            <div className="title">فريق سعودي, وخبرات سعودية متمكنة وقوية</div>
           </div>
           <div className="overflow-hidden">
             <span className="text-gradient block title">
@@ -97,7 +95,7 @@ const TextAniamtionAbout = () => {
           </div>
           <div className="overflow-hidden">
             <div className="title">
-              وطموحك هو طموحنا, انت سلمنا الفكرة وطريقة اخراج مشروعك علينا
+              وطموحك هو طموحنا, أنت سلمنا الفكرة وطريقة إخراج مشروعك علينا
             </div>
           </div>
         </div>
@@ -115,8 +113,8 @@ const TextAniamtionAbout = () => {
             <div className="flex flex-col gap-3 max-md:items-center">
               <h3 className="font-bold text-[28px] md:text-[2.3vw]">المهمة</h3>
               <p className="w-[70%] leading-[2] font-semibold">
-                نجمع بين المنهجية والخبرة. الابداع واإلاتقان والحروف والكلام.
-                الي أن تصل بك الي النجاح بإتمام.
+                نجمع بين المنهجية والخبرة. الإبداع  واإلاتقان والحروف والكلام.
+                إلى أن تصل بك إلى النجاح بإتمام.
               </p>
             </div>
           </section>

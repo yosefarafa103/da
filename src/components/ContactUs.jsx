@@ -57,7 +57,7 @@ const ContactUs = () => {
             className="w-full min-h-[200px] p-[10px] rounded-[5px] outline-none text-black"
             id=""
             onChange={(e) => setMessage(e.target.value)}
-            placeholder=" اكتب وصف بسيط للخدمة يلي تبيها"
+            placeholder="اكتب وصف بسيط للخدمة"
           />
         </section>
         <button className="bg-white text-black block mx-auto px-[24px] py-[7px] mt-[20px] font-bold">
