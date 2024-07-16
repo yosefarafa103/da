@@ -1,9 +1,18 @@
 import TextAniamtionAbout from "@/components/TextAniamtionAbout";
 import Features from "@/components/Features";
 import Footer from "@/components/Footer";
+import Script from "next/script";
 const About = () => {
   return (
     <>
+      <Script
+        src="https://www.googletagmanager.com/gtag/js?id=G-6XXC586WZQ"
+        async
+      />
+      <Script>
+        window.dataLayer = window.dataLayer || []; window.dataLayer.push('js',
+        new Date()) window.dataLayer.push('config', 'G-6XXC586WZQ')
+      </Script>
       <title>من نحن</title>
       {/* <AnimateSection title={`من نحن`}> */}
       <section style={{ direction: "rtl" }} className="bg-[#000]">
@@ -26,7 +35,6 @@ const About = () => {
       </section>
       {/* </AnimateSection> */}
       <Footer />
-
     </>
   );
 };

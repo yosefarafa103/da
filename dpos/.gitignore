@@ -1,0 +1,25 @@
+# Next.js
+.next/
+out/
+build/
+dist/
+
+# Compiled output
+dist/
+tmp/
+out-tmp/
+*.DS_Store
+
+# Node
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# React
+.next/
+build/
+
+# Misc
+.idea/
+*.swp
+*.swo

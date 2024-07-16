@@ -3,6 +3,7 @@ import Footer from "@/components/Footer";
 import SocialMedia from "@/components/SocialMedia";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
+import Script from "next/script";
 const OurServices = () => {
   useGSAP(() => {
     gsap.from(".page-t", {
@@ -25,7 +26,14 @@ const OurServices = () => {
   return (
     <>
       {/* <SocialMedia /> */}
-
+      <Script
+        src="https://www.googletagmanager.com/gtag/js?id=G-6XXC586WZQ"
+        async
+      />
+      <Script>
+        window.dataLayer = window.dataLayer || []; window.dataLayer.push('js',
+        new Date()) window.dataLayer.push('config', 'G-6XXC586WZQ')
+      </Script>
       <title>خدماتنا</title>
       {/* 
       <div className="bg-[#a8a8a8] page-content w-full z-[10000] origin-top fixed top-[100px] flex items-center justify-center h-[90vh] font-[helveticaNeue] text-[10vw]">
@@ -38,7 +46,7 @@ const OurServices = () => {
         className="min-h-[60vh] px-[5vw] text-white"
       >
         <div className="py-[45px] ">
-          <h3 className="my-[20px]  font-[900]  font-[helveticaNeue] text-[30px]">
+          <h3 className="my-[20px]  font-[900] text-center font-[helveticaNeue] text-[30px]">
             مــجــالات دبـــــــــــــــــــوس
           </h3>
           <section className="grid grid-cols-4 mt-[50px] md:grid-cols-2 lg:grid-cols-3 max-sm:grid-cols-1 gap-[30px]">

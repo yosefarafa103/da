@@ -50,11 +50,9 @@ const Header = () => {
       className="flex fixed w-full justify-between left-0 top-0 z-[99999999999999999999] items-center justify-between bg-[#000] px-[22px] md:px-[2.1vw]"
     >
       <Link href={`/`} className="block w-fit overflow-hidden">
-        <Image
+        <img
           src={logo.src}
           loading="lazy"
-          width={300}
-          height={100}
           className="!h-[100px] !w-[200px] scale-[1.5] object-cover rotate-[90deg]"
           alt="logo"
         />

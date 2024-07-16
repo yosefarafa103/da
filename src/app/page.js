@@ -1,4 +1,4 @@
-"use client";
+// "use client";
 import AnimateSection from "@/components/AnimateSection";
 import Footer from "@/components/Footer";
 import HomePage from "@/components/HomePage";

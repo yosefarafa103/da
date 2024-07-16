@@ -18,10 +18,13 @@ import i16 from "@/assets/partners/CEE2C68D-19B2-467E-94A8-A5CB0A03077F.png";
 import i17 from "@/assets/partners/E134A1D0-D9A4-4A27-9F77-0195B35F3252.png";
 import i18 from "@/assets/partners/EA97E325-5496-4250-BEC4-85AE1E56A821.png";
 import i19 from "@/assets/partners/FAEBA281-F45B-4232-A178-B48687A40573.png";
+import i20 from "@/assets/partners/Untitled design (2).png";
+//
 import Footer from "@/components/Footer";
 import { motion } from "framer-motion";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
+import Script from "next/script";
 const Customer = () => {
   useGSAP(() => {
     gsap.from(".img", {
@@ -29,12 +32,21 @@ const Customer = () => {
       opacity: 0,
       stagger: {
         each: 0.1,
-        grid: "auto"
+        grid: "auto",
       },
     });
   }, []);
   return (
     <>
+      <Script
+        src="https://www.googletagmanager.com/gtag/js?id=G-6XXC586WZQ"
+        async
+      />
+      <Script>
+        window.dataLayer = window.dataLayer || []; function gtag()
+        {dataLayer.push(arguments)}
+        gtag('js', new Date()); gtag('config', 'G-6XXC586WZQ');
+      </Script>
       {/* <SocialMedia /> */}
       <title>شركاء التواصل</title>
 
@@ -63,10 +75,11 @@ const Customer = () => {
             i17,
             i18,
             i19,
+            i20,
           ].map((el) => (
             <img
               src={el.src}
-              className="h-[100px] img scale-[1.7] max-[576px]:mx-auto"
+              className="h-[100px] img scale-[1] max-[576px]:mx-auto"
               loading="lazy"
               alt=""
             />
